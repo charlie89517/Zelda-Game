@@ -185,7 +185,25 @@ public:
 	inline void			setDesription(char const*);
 	inline void			setRoomNumber(int);
 
+	//North
+	void operator+(Room* roomNo) {
+		paths[0] = roomNo;
+	}
 
+	//South
+	void operator-(Room* roomNo) {
+		paths[1] = roomNo;
+	}
+
+	//East
+	void operator*(Room* roomNo) {
+		paths[2] = roomNo;
+	}
+
+	//West
+	void operator/(Room* roomNo) {
+		paths[3] = roomNo;
+	}
 };
 
 

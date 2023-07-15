@@ -476,56 +476,69 @@ Room* Castle::getRoom( int room_No )
 void Castle::LinkRoomsWithOtherThings(Item** items , Monster** monsters , Princess* princess)
 {
 	//Room1
-	rooms[0].setSouth(&rooms[3]);
-	rooms[0].setEast(&rooms[1]);
+	//rooms[0].setSouth(&rooms[3]);
+	rooms[0] - (&rooms[3]);
+	//rooms[0].setEast(&rooms[1]);
+	rooms[0] * (&rooms[1]);
 	//room1.west = Exit from castle
 
 
 	//Room2
-	rooms[1].setWest(&rooms[0]);
-	rooms[1].setEast(&rooms[2]);
-	rooms[1].setSouth(&rooms[4]);
+	//rooms[1].setWest(&rooms[0]);
+	rooms[1] / (&rooms[0]);
+	//rooms[1].setEast(&rooms[2]);
+	rooms[1] * (&rooms[2]);
+	//rooms[1].setSouth(&rooms[4]);
+	rooms[1] - (&rooms[4]);
 
-	rooms[1].setItemsPresent(0 , items[0]);
+	rooms[1].setItemsPresent(0, items[0]);
 
 
 	//Room3
-	rooms[2].setWest(&rooms[1]);
-	rooms[2].setItemsPresent(0 , items[3]);
+	//rooms[2].setWest(&rooms[1]);
+	rooms[2] / (&rooms[1]);
+	rooms[2].setItemsPresent(0, items[3]);
 
 
 	//Room4
-	rooms[3].setNorth(&rooms[0]);
-	rooms[3].setItemsPresent(0 , items[1]);
+	//rooms[3].setNorth(&rooms[0]);
+	rooms[3] + (&rooms[0]);
+	rooms[3].setItemsPresent(0, items[1]);
 
 
 	//Room5
-	rooms[4].setNorth(&rooms[1]);
-	rooms[4].setEast(&rooms[5]);
+	//rooms[4].setNorth(&rooms[1]);
+	rooms[4] + (&rooms[1]);
+	//rooms[4].setEast(&rooms[5]);
+	rooms[4] * (&rooms[5]);
 
-	rooms[4].setMonsterPresent( monsters[0] );
+	rooms[4].setMonsterPresent(monsters[0]);
 
 
 	//Room6
-	rooms[5].setWest(&rooms[4]);
+	//rooms[5].setWest(&rooms[4]);
+	rooms[5] / (&rooms[4]);
 
-	rooms[5].setMonsterPresent( monsters[1] );
+	rooms[5].setMonsterPresent(monsters[1]);
 
 
 	//Room7
-	rooms[6].setEast(&rooms[7]);
-	rooms[6].setItemsPresent(0 , items[4]);
+	//rooms[6].setEast(&rooms[7]);
+	rooms[6] * (&rooms[7]);
+	rooms[6].setItemsPresent(0, items[4]);
 
 
 	//Room8
-	rooms[7].setWest(&rooms[6]);
-	rooms[7].setNorth(&rooms[4]);
-
-	rooms[7].setItemsPresent(0 , items[2]);
+	//rooms[7].setWest(&rooms[6]);
+	rooms[7] / (&rooms[6]);
+	//rooms[7].setNorth(&rooms[4]);
+	rooms[7] + (&rooms[4]);
+	rooms[7].setItemsPresent(0, items[2]);
 
 
 	//Room9
-	rooms[8].setNorth(&rooms[5]);
+	//rooms[8].setNorth(&rooms[5]);
+	rooms[8] + (&rooms[5]);
 	rooms[8].setPrincessPresent(princess);
 }
 
