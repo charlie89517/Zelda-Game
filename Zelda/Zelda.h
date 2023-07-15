@@ -1,5 +1,5 @@
 #pragma once
-
+#include<vector>
 //---------------------Classes------------------------
 class HelperFunctions;
 class Item;
@@ -147,8 +147,8 @@ public:
 class Room
 {
 private:
-	Room* 		paths[4];
-	Item* 		items_Present[5];
+	std::vector<Room*> 		paths;
+	std::vector<Item*> 		items_Present;
 	Monster*    monster_Present;
 	Princess*   princess_Present;
 
@@ -161,8 +161,8 @@ public:
 	Room();
 	~Room();
 
-	inline Room** 		getPaths();
-	inline Item**		getItemsPresent();
+	inline std::vector<Room*>& 		getPaths();
+	inline std::vector<Item*>&		getItemsPresent();
 	inline Monster*		getMonsterPresent();
 	inline Princess*	getPrincessPresent();
 	inline char*		getDescription();

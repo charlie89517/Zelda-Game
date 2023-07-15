@@ -242,15 +242,17 @@ void Princess::setLivingState(bool currentState)
 
 Room::Room()
 {
-	for (int i = 0; i < 4; ++i)
-	{
-		paths[i] = nullptr;
-	}
-
-	for (int i = 0; i < 5; ++i)
-	{
-		items_Present[i] = nullptr;
-	}
+	//for (int i = 0; i < 4; ++i)
+	//{
+	//	paths[i] = nullptr;
+	//}
+	
+	//for (int i = 0; i < 5; ++i)
+	//{
+	//	items_Present[i] = nullptr;
+	//}
+	paths.resize(4);
+	items_Present.resize(5);
 
 	monster_Present  = nullptr;
 	princess_Present = nullptr;
@@ -328,18 +330,28 @@ bool Room::isRoomFull()
 //Getters
 
 
-
-Room** Room::getPaths()
-{
+std::vector<Room*>& Room::getPaths() {
 	return paths;
 }
 
 
 
-Item** Room::getItemsPresent()
+std::vector<Item*>& Room::getItemsPresent()
 {
 	return items_Present;
 }
+
+//Room** Room::getPaths()
+//{
+//	return paths;
+//}
+//
+//
+//
+//Item** Room::getItemsPresent()
+//{
+//	return items_Present;
+//}
 
 
 
