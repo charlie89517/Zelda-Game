@@ -390,33 +390,33 @@ int Room::getRoomNumber()
 // paths[3] = West
 
 
-
-void Room::setNorth(Room* roomNo)
-{
-	paths[0] = roomNo;
-}
-
-
-
-void Room::setSouth(Room* roomNo)
-{
-	paths[1] = roomNo;
-}
-
-
-
-void Room::setEast(Room* roomNo)
-{
-	paths[2] = roomNo;
-}
-
-
-
-void Room::setWest(Room* roomNo)
-{
-	paths[3] = roomNo;
-}
-
+//
+//void Room::setNorth(Room* roomNo)
+//{
+//	paths[0] = roomNo;
+//}
+//
+//
+//
+//void Room::setSouth(Room* roomNo)
+//{
+//	paths[1] = roomNo;
+//}
+//
+//
+//
+//void Room::setEast(Room* roomNo)
+//{
+//	paths[2] = roomNo;
+//}
+//
+//
+//
+//void Room::setWest(Room* roomNo)
+//{
+//	paths[3] = roomNo;
+//}
+//
 
 
 void Room::setItemsPresent(int itemNo , Item* item)
@@ -547,16 +547,20 @@ void Castle::LinkRoomsWithOtherThings(std::vector<Item*>& items , std::vector<Mo
 
 void Castle::LinkRoom5and8()
 {
-	rooms[4].setSouth(&rooms[7]);
-	rooms[7].setNorth(&rooms[4]);
+	//rooms[4].setSouth(&rooms[7]);
+	rooms[4] - (&rooms[7]);
+	//rooms[7].setNorth(&rooms[4]);
+	rooms[7] + (&rooms[4]);
 }
 
 
 
 void Castle::LinkRoom6and9()
 {
-	rooms[5].setSouth(&rooms[8]);
-	rooms[8].setNorth(&rooms[5]);
+	//rooms[5].setSouth(&rooms[8]);
+	//rooms[8].setNorth(&rooms[5]);
+	rooms[5] - (&rooms[8]);
+	rooms[8] + (&rooms[5]);
 }
 
 

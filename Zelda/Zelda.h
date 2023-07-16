@@ -173,12 +173,12 @@ public:
 
 	int					directionIndex(char const*);
 	char* 				directionName(int);
-
+	/*
 	inline void			setEast(Room*);
 	inline void			setWest(Room*);
 	inline void			setSouth(Room*);
 	inline void			setNorth(Room*);
-
+	*/
 	inline void			setMonsterPresent(Monster*);
 	inline void			setItemsPresent(int, Item*);
 	inline void			setPrincessPresent(Princess*);
