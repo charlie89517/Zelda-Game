@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HelperFunctions">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAAAAAAAAAAAAAEAAAUAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Treasure">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAQA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weapon">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monster">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAAAAAAAEAACAABAAAAAAAEAABAAgAEAAABAAA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Princess">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAEAAAAAAAAAIAAAAAABAAAAEAAAAAAA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Room">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACAEQAgIACoIJAACCCAAAAAQEAAAIApgAAAAAI=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAQAAAAIAAAAAAAQIAAAAAAAAACAAAA4=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQSQAAAIAUAEAAAAAEBAAAAYAEAAACIAAAAQEAgBE=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAACAAQAIAAAAAAAAAAigQAAAgBQAAAAAAAA=</HashCode>
+      <FileName>Zelda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft JhengHei UI" Size="9" />
+</ClassDiagram>
