@@ -214,16 +214,15 @@ public:
 class Castle
 {
 private:
-	Room rooms[9];
+	std::vector<Room> rooms;
 
 public:
 	Castle();
 	~Castle();
 
 	inline Room* getRoom(int);
-
-	void LinkRoomsWithOtherThings(Item**, Monster**, Princess*);
-	void HiddenRoomsUnlocker(char const*, Monster**);
+	void LinkRoomsWithOtherThings(std::vector<Item*>&, std::vector<Monster*>&, Princess*);
+	void HiddenRoomsUnlocker(char const*, std::vector<Monster*>&);
 	void LinkRoom5and8();
 	void LinkRoom6and9();
 
@@ -242,10 +241,10 @@ class Player
 {
 
 private:
-	char* 		name;
-	Princess* 	princess_Pointer;
-	Item* 		bag[10];
-	Room* 		current_Room;
+	char* name;
+	Princess* princess_Pointer;
+	std::vector<Item*> 		bag;
+	Room* current_Room;
 
 	bool is_Alive;
 	int  cash;
@@ -268,7 +267,7 @@ public:
 
 	void 			CashUpdater();
 	inline int  	getCash();
-	inline char*	getPlayerName();
+	inline char* getPlayerName();
 
 	bool			Move(char const*, bool&);
 	void			Pick(char const*);
@@ -283,16 +282,15 @@ public:
 
 
 
-
 //--------------------------Game-------------------------------
 class Game
 {
 private:
-	Castle* 	castlePtr;
-	Item*		itemsPtr[5];
-	Princess*	princessPtr;
-	Monster* 	monstersPtr[2];
-	Player*		playerPtr;
+	Castle* castlePtr;
+	std::vector<Item*>	itemsPtr;
+	Princess* princessPtr;
+	std::vector<Monster*>	monstersPtr;
+	Player* playerPtr;
 
 
 public:

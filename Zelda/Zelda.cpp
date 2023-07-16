@@ -473,9 +473,10 @@ Room* Castle::getRoom( int room_No )
 
 
 
-void Castle::LinkRoomsWithOtherThings(Item** items , Monster** monsters , Princess* princess)
+void Castle::LinkRoomsWithOtherThings(std::vector<Item*>& items , std::vector<Monster*>& monsters , Princess* princess)
 {
 	//Room1
+	rooms.resize(9);
 	//rooms[0].setSouth(&rooms[3]);
 	rooms[0] - (&rooms[3]);
 	//rooms[0].setEast(&rooms[1]);
@@ -560,7 +561,7 @@ void Castle::LinkRoom6and9()
 
 
 
-void Castle::HiddenRoomsUnlocker(char const* monsterName , Monster** monsters)
+void Castle::HiddenRoomsUnlocker(char const* monsterName , std::vector<Monster*>& monsters)
 {
 	if (strcmp(monsterName , (monsters[0]->getMonsterName())) == 0)
 	{
@@ -626,10 +627,11 @@ Player::Player(char const* player_Name , Room* room1 )
 	is_Alive = true;
 	cash = 0;
 
-	for (int i = 0; i < 10; ++i)
-	{
-		bag[i] = nullptr;
-	}
+	bag.resize(10);
+	//for (int i = 0; i < 10; ++i)
+	//{
+	//	bag[i] = nullptr;
+	//}
 }
 
 
@@ -981,16 +983,21 @@ void Player::Exit()
 Game::Game()
 {
 	//Creating Items for the Game
-	itemsPtr[0] = new Treasure ("GOLDEN EGG" 	, 500000);
-	itemsPtr[1] = new Treasure ("GOLDEN CHALICE" , 500000);
-	itemsPtr[2] = new Treasure ("PROOF" , 1000000);
-	itemsPtr[3] = new Weapon   ("SHIELD");
-	itemsPtr[4] = new Weapon   ("DAGGER");
+	itemsPtr.push_back(new Treasure("GOLDEN EGG", 500000));
+	itemsPtr.push_back(new Treasure("GOLDEN CHALICE", 500000));
+	itemsPtr.push_back(new Treasure("PROOF", 1000000));
+	itemsPtr.push_back(new Weapon("SHIELD"));
+	itemsPtr.push_back(new Weapon("DAGGER"));
+	//itemsPtr[0] = new Treasure ("GOLDEN EGG" 	, 500000);
+	//itemsPtr[1] = new Treasure ("GOLDEN CHALICE" , 500000);
+	//itemsPtr[2] = new Treasure ("PROOF" , 1000000);
+	//itemsPtr[3] = new Weapon   ("SHIELD");
+	//itemsPtr[4] = new Weapon   ("DAGGER");
 
 
 	//Creating Monsters for the Game
-	monstersPtr[0] = new Monster  ("MEDUSA"  ,  itemsPtr[3]);
-	monstersPtr[1] = new Monster  ("DRACULA" ,  itemsPtr[4]);
+	monstersPtr.push_back(new Monster("MEDUSA", itemsPtr[3]));
+	monstersPtr.push_back(new Monster("DRACULA", itemsPtr[4]));
 
 
 	//Creating Princess for the Game
